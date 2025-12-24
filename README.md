@@ -37,4 +37,4 @@ The server will be running on [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 
 The website is deployed thanks to [PythonAnyWhere](https://www.pythonanywhere.com/). 
 
-It is so host on [chiara06830.pythonanywhere.com](https://chiara06830.pythonanywhere.com/).
+You can find the deployed version on [chiara06830.pythonanywhere.com](https://chiara06830.pythonanywhere.com/).
