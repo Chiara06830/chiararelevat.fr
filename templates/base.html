@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+        <script src="https://kit.fontawesome.com/4bed252b70.js" crossorigin="anonymous"></script>
+        <title>Chiara RELEVAT</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <b>Chiara RELEVAT</b>
+                <div>
+                    <a href="/experiences">Experiences Passées</a>
+                    <a href="/education">Education</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <p>Contacte : <a href="email:chiara.relevat@univ-rennes.fr" target="_blank">chiara.relevat@univ-rennes.fr</a></p>
+            <p>Réseaux : <a href="https://github.com/Chiara06830" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/chiararelevat/" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a></p>
+        </footer>
+    </body>
+</html>
