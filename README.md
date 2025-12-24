@@ -6,7 +6,7 @@ This website is develloped with [Flask](https://flask.palletsprojects.com/).
 
 - Python >= 3
 
-### First time launching website
+### Installing website
 
 1. Create a python environment
 
@@ -19,13 +19,13 @@ python3 -m venv .venv
    ```bash
    . .venv/bin/activate
    ```
-3. Install Flask
+3. Install Flask and dependencies
 
    ```bash
-   pip install Flask
+   pip install -r requirements.txt
    ```
 
-### Launching the website locally
+### Launching website locally
 
 ```bash
 flask --app app run
