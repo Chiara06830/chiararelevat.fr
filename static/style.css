@@ -14,7 +14,8 @@ a {
 }
 
 .intro img {
-    max-width: 100px;
+    align-items: center;
+    width: 100px;
     margin: 5px;
     border-radius: 50px;
 }
@@ -31,4 +32,28 @@ a {
     display: inline-block;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 3px 3px rgb(189, 208, 221);
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15px;
+}
+
+.card .title {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .intro img {
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
+    }
 }
