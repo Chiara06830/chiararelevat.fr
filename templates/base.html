@@ -3,17 +3,17 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='base.css')}}">
+        {% block head %}{% endblock %}
         <script src="https://kit.fontawesome.com/4bed252b70.js" crossorigin="anonymous"></script>
         <title>Chiara RELEVAT</title>
     </head>
     <body>
         <header>
             <nav>
-                <b>Chiara RELEVAT</b>
+                <a href="/" id="home_title"><b>Chiara RELEVAT</b><a>
                 <div>
-                    <a href="/experiences">Experiences Passées</a>
-                    <a href="/education">Education</a>
+                    <a href="/experiences">Experiences Professionelles</a>
                 </div>
             </nav>
         </header>

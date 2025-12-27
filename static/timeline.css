@@ -1,0 +1,46 @@
+.timeline {
+    --line-color: rgb(42, 42, 154);
+    --date-width: 180px;
+    --line-width: 20px;
+
+    display: grid;
+    grid-template-columns: var(--date-width) var(--line-width) auto;
+    align-items:center;
+    column-gap: 10px;
+    position: relative;
+
+}
+
+/* ------------------ Date ------------------ */
+.timeline b {
+    color: var(--line-color);
+    font-size: 20px;
+}
+
+/* ------------------ Point Drawing ------------------ */
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: calc(var(--date-width) + var(--line-width)); /* colonne date + moitié colonne centrale */
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: var(--line-color);
+}
+
+.timestamp {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.point {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--line-color);
+    margin-left: calc(var(--line-width) / 4);
+}
+
+/* ------------------ Experience Cards ------------------ */

@@ -1,0 +1,24 @@
+.intro {
+    display: flex;
+    align-items:center;
+}
+
+.intro img {
+    align-items: center;
+    width: 100px;
+    margin: 5px;
+    border-radius: 50px;
+}
+
+.network a {
+    border: solid;
+    margin: 2px;
+    padding: 1px;
+    border-radius: 10px;
+}
+
+.semestre {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}

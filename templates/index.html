@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='cards.css')}}">
+{% endblock %}
+
 {% block content %}
     <div class="intro">
-        <img src="{{url_for('static', filename='me.jpg')}}" alt="Photo de ma bouille" />
+        <img src="{{url_for('static', filename='img/me.jpg')}}" alt="Photo de ma bouille" />
         <div class="info">
             <h1> Chiara RELEVAT</h1>
             <p>Enseignante contractuelle à l'<a href="https://www.univ-rennes.fr/">Universitée de Rennes</a> 
@@ -28,130 +33,200 @@
             tous niveau.</p>
 
         <h2>Premier semestre</h2>
-        <div class="card">
-            <div class="title">
-                <h3>ACE</h3>
-                <p>Algorithme et Compléxité Expérimental</p>
-                <b>Licence 1 ISTN</b>
+        <div class="semestre">
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>ACE</h3>
+                        <p>Algorithme et Compléxité Expérimental</p>
+                        <b>Licence 1 ISTN</b>
+                    </div>
+                    <p><i>Professseur responsable : </i> 
+                        <a href="https://people.irisa.fr/Thomas.Genet/">Thomas GENET</a>
+                    </p>
+                    <div class="technologies">
+                        <p>Java</p>
+                    </div>
+                </div>
             </div>
-            <p><i>Professseur responsable : </i> 
-                <a href="https://people.irisa.fr/Thomas.Genet/">Thomas GENET</a>
-            </p>
-        </div>
-        <div class="card">
-            <div class="title">
-                <h3>PO</h3>
-                <p>Programmation Objet</p>
-                <b>Licence 2 ISTN</b>
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>PO</h3>
+                        <p>Programmation Objet</p>
+                        <b>Licence 2 ISTN</b>
+                    </div>
+                    <p><i>Professseur responsable : </i> 
+                        <a href="https://people.irisa.fr/Alexandre.Termier/">Alexandre TERMIER</a>
+                    </p>
+                    <div class="technologies">
+                        <p>Java</p>
+                    </div>
+                </div>
             </div>
-            <p><i>Professseur responsable : </i> 
-                <a href="https://people.irisa.fr/Alexandre.Termier/">Alexandre TERMIER</a>
-            </p>
-        </div>
-        <div class="card">
-            <div class="title">
-                <h3>WEB</h3>
-                <p>Base de la programmation web</p>
-                <b>Licence 2 ISTN</b>
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>WEB</h3>
+                        <p>Base de la programmation web</p>
+                        <b>Licence 2 ISTN</b>
+                    </div>
+                    <p><i>Professseur responsable : </i> 
+                        <a href="https://istic.univ-rennes.fr/interlocuteurs/fabien-guntz">Fabien GUNTZ</a>
+                    </p>
+                    <div class="technologies">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>Flask</p>
+                        <p>Python</p>
+                    </div>
+                </div>
             </div>
-            <p><i>Professseur responsable : </i> 
-                <a href="https://istic.univ-rennes.fr/interlocuteurs/fabien-guntz">Fabien GUNTZ</a>
-            </p>
-        </div>
-        <div class="card">
-            <div class="title">
-                <h3>PRA</h3>
-                <p>Programation Avancée</p>
-                <b>Licence 3 Informatique</b>
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>PRA</h3>
+                        <p>Programation Avancée</p>
+                        <b>Licence 3 Informatique</b>
+                    </div>
+                    <p><i>Professseur responsable : </i> 
+                        Véronique MASSON
+                    </p>
+                    <div class="technologies">
+                        <p>Java</p>
+                    </div>
+                </div>
             </div>
-            <p><i>Professseur responsable : </i> 
-                Véronique MASSON
-            </p>
-        </div>
-        <div class="card">
-            <div class="title">
-                <h3>NJava</h3>
-                <p>Remise à niveau Java</p>
-                <b>Licence 3 MIAGE</b>
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>NJava</h3>
+                        <p>Remise à niveau Java</p>
+                        <b>Licence 3 MIAGE</b>
+                    </div>
+                    <p><i>Professseur responsable : </i> 
+                        <a href="https://istic.univ-rennes.fr/interlocuteurs/mickael-foursov">Mickaël FOURSOV</a>
+                    </p>
+                    <div class="technologies">
+                        <p>Java</p>
+                    </div>
+                </div>
             </div>
-            <p><i>Professseur responsable : </i> 
-                <a href="https://istic.univ-rennes.fr/interlocuteurs/mickael-foursov">Mickaël FOURSOV</a>
-            </p>
-        </div>
-        <div class="card">
-            <div class="title">
-                <h3>WE</h3>
-                <p>Web Engineering</p>
-                <b>Master 1 Ingénieurie Logiciel</b>
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>WE</h3>
+                        <p>Web Engineering</p>
+                        <b>Master 1 Ingénieurie Logiciel</b>
+                    </div>
+                    <a href="https://olivier.barais.fr/d/teaching/we"> Site du cours</a>
+                    <p><i>Professseur responsable : </i> 
+                        <a href="https://olivier.barais.fr/">Olivier BARAIS</a>
+                    </p>
+                    <div class="technologies">
+                        <p>JavaScript</p>
+                        <p>TypeScript</p>
+                        <p>Angular</p>
+                        <p>Vue</p>
+                        <p>React</p>
+                    </div>
+                </div>
             </div>
-            <a href="https://olivier.barais.fr/d/teaching/we"> Site du cours</a>
-            <p><i>Professseur responsable : </i> 
-                <a href="https://olivier.barais.fr/">Olivier BARAIS</a>
-            </p>
-        </div>
-        <div class="card">
-            <div class="title">
-                <h3>MOB</h3>
-                <p>Programation Mobile Android</p>
-                <b>Master 1 MIAGE</b>
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>MOB</h3>
+                        <p>Programation Mobile Android</p>
+                        <b>Master 1 MIAGE</b>
+                    </div>
+                    <p><i>Professseur responsable : </i> 
+                        <a href="https://istic.univ-rennes.fr/interlocuteurs/mickael-foursov">Mickaël FOURSOV</a>
+                    </p>
+                    <div class="technologies">
+                        <p>Android Studio</p>
+                        <p>Kotlin</p>
+                    </div>
+                </div>
             </div>
-            <p><i>Professseur responsable : </i> 
-                <a href="https://istic.univ-rennes.fr/interlocuteurs/mickael-foursov">Mickaël FOURSOV</a>
-            </p>
-        </div>
-        <div class="card">
-            <div class="title">
-                <h3>ASE</h3>
-                <p>Advanced Software Engineering</p>
-                <b>Troisième année de cycle ingénieure</b>
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>ASE</h3>
+                        <p>Advanced Software Engineering</p>
+                        <b>Troisième année de cycle ingénieure</b>
+                    </div>
+                    <a herf="https://stephaniechallita.github.io/ase">Site du cours</a>
+                    <p><i>Professseur responsable : </i> 
+                        <a href="https://stephaniechallita.github.io/">Stéphanie CHALLITA</a>
+                    </p>
+                    <div class="technologies">
+                        <p>EMF</p>
+                        <p>Xtext</p>
+                        <p>Langium</p>
+                        <p>TypeScript</p>
+                    </div>
+                </div>
             </div>
-            <a herf="https://stephaniechallita.github.io/ase">Site du cours</a>
-            <p><i>Professseur responsable : </i> 
-                <a href="https://stephaniechallita.github.io/">Stéphanie CHALLITA</a>
-            </p>
         </div>
 
         <h2>Deuxième semestre</h2>
-        <div class="card">
-            <div class="title">
-                <h3>GEN</h3>
-                <p>Génie Logiciel</p>
-                <b>Licence 2 ISTN</b>
+        <div class="semestre">
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>GEN</h3>
+                        <p>Génie Logiciel</p>
+                        <b>Licence 2 ISTN</b>
+                    </div>
+                    <a herf="https://people.irisa.fr/Jean-Marc.Jezequel/enseignement/L2GEN/">Site du cours</a>
+                    <p><i>Professseur responsable : </i> 
+                        <a href="https://people.irisa.fr/Jean-Marc.Jezequel/">Jean-Marc Jezequel</a>
+                    </p>
+                    <div class="technologies">
+                        <p>Java</p>
+                        <p>JavaSwing</p>
+                    </div>
+                </div>
             </div>
-            <a herf="https://people.irisa.fr/Jean-Marc.Jezequel/enseignement/L2GEN/">Site du cours</a>
-            <p><i>Professseur responsable : </i> 
-                <a href="https://people.irisa.fr/Jean-Marc.Jezequel/">Jean-Marc Jezequel</a>
-            </p>
-        </div>
-        <div class="card">
-            <div class="title">
-                <h3>BMO</h3>
-                <p>Base de la Modélisation Orientée Objets</p>
-                <b>Licence 3 Informatique</b>
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>BMO</h3>
+                        <p>Base de la Modélisation Orientée Objets</p>
+                        <b>Licence 3 Informatique</b>
+                    </div>
+                    <p><i>Professseur responsable : </i> 
+                        <a href="https://people.irisa.fr/Jean-Marc.Jezequel/">Jean-Marc Jezequel</a>
+                    </p>
+                </div>
             </div>
-            <p><i>Professseur responsable : </i> 
-                <a href="https://people.irisa.fr/Jean-Marc.Jezequel/">Jean-Marc Jezequel</a>
-            </p>
-        </div>
-        <div class="card">
-            <div class="title">
-                <h3>SSYS</h3>
-                <p>Sécurité Système</p>
-                <b>Master 1 Cyber Responsable de la Sécurité des Systèmes d'information</b>
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>SSYS</h3>
+                        <p>Sécurité Système</p>
+                        <b>Master 1 Cyber Responsable de la Sécurité des Systèmes d'information</b>
+                    </div>
+                    <p><i>Professseur responsable : </i> 
+                        <a href="https://olivier.barais.fr/">Olivier BARAIS</a>
+                    </p>
+                </div>
             </div>
-            <p><i>Professseur responsable : </i> 
-                <a href="https://olivier.barais.fr/">Olivier BARAIS</a>
-            </p>
-        </div>
-        <div class="card">
-            <div class="title">
-                <h3>IPD</h3>
-                <p>Programmation Réseau en Java</p>
-                <b>Master 1 Cloud et Réseau</b>
+            <div class="card">
+                <div>
+                    <div class="title">
+                        <h3>IPD</h3>
+                        <p>Programmation Réseau en Java</p>
+                        <b>Master 1 Cloud et Réseau</b>
+                    </div>
+                    <p><i>Professseur responsable : </i> 
+                        <a href="https://istic.univ-rennes.fr/interlocuteurs/yoann-maurel">Yoann MAUREL</a>
+                    </p>
+                    <div class="technologies">
+                        <p>Java</p>
+                    </div>
+                </div>
             </div>
-            <p><i>Professseur responsable : </i> 
-                <a href="https://istic.univ-rennes.fr/interlocuteurs/yoann-maurel">Yoann MAUREL</a>
-            </p>
         </div>
     </div>
 {% endblock %}

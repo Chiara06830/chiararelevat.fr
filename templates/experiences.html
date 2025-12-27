@@ -1,19 +1,140 @@
 {% extends 'base.html' %}
 
-{% block content %}
-<div class="timestamp">
-    <b>2022</b>
-    <div class="point"></div>
-    <div class="card">
-        <p>Capgemini</p>
-    </div>
-</div>
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='timeline.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='cards.css')}}">
+{% endblock %}
 
-<div class="timestamp">
-    <b>2022</b>
-    <div class="point"></div>
+{% block content %}
+<div class="timeline">
+    
+    <b>Sept. 2024 - Aujourd'hui</b>
+    <div class="timestamp">
+        <div class="point"></div>
+    </div>
     <div class="card">
-        <p>Capgemini</p>
+        <div class="info">
+            <div class="title">
+                <h3>Enseignante contractuelle</h3>
+                <p><a href="https://istic.univ-rennes.fr/">ISTIC</a> - <a href="https://www.univ-rennes.fr/">Université de Rennes</a></p>
+            </div>
+            <p>Détails des enseignements sur <a href="/">la home page</a>.</p>
+        </div>
+        <img src="/static/img/logoisticfr.png"/>
+    </div>
+
+    <b>Sept. 2023 - Août 2024</b>
+    <div class="timestamp">
+        <div class="point"></div>
+    </div>
+    <div class="card">
+        <div class="info">
+            <div class="title">
+                <h3>Ingénieure de recherche</h3>
+                <p><a href="https://www.inria.fr/en/inria-centre-rennes-university">Centre Inria de l'université de Rennes</a></p>
+            </div>
+            <p>Dévellopement d'une famille de DSL pour le rootage de paquet IPv6 sur un réseau.</p>
+            <p>+ Enseignement contractuelle à l'<a href="https://www.insa-rennes.fr/index.html">INSA</a> sur des cours de Java en première année de prépa.</p>
+            <div class="technologies">
+                <p>GEMOC studio</p>
+                <p>EMF</p>
+                <p>Java</p>
+                <p>Kermeta</p>
+                <p>Xtext</p>
+            </div>
+        </div>
+        <img src="/static/img/inria.jpg"/>
+    </div>
+
+
+    <b>Avril 2023 - Août 2023</b>
+    <div class="timestamp">
+        <div class="point"></div>
+    </div>
+    <div class="card">
+        <div class="info">
+            <div class="title">
+                <h3>Stagiaire Dévellopeuse Back-End</h3>
+                <p><a href="https://vivadrive.io/">Vivadrive</a></p>
+            </div>
+            <p>Dévellopement d'une API pour calculer le coût de l'usure d'une voiture a travers les années.</p>
+            <div class="technologies">
+                <p>Django</p>
+                <p>Python</p>
+            </div>
+        </div>
+        <img src="/static/img/vivadrive-logo-dark.jpg"/>
+    </div>
+
+
+    <b>Mai 2022 - Juin 2022</b>
+    <div class="timestamp">
+        <div class="point"></div>
+    </div>
+    <div class="card">
+        <div class="info">
+            <div class="title">
+                <h3>Stage de recherche</h3>
+                <p><a href="https://www.univ-brest.fr/faculte-sciences/fr?q=en">Université de Bretagne Occidentale</a> - <a href="https://www.thalesgroup.com/">Thales</a></p>
+            </div>
+            <p><i>Objectif :</i> Rendre l'environnement <a href="https://www.khronos.org/sycl/">SYCL</a> de <a href="https://www.intel.com/">Intel</a> accessible aux dévellopers de C++.</p>
+            <p>Dévellopement d'une librarie C++ qui permet de :</p>
+            <ul>
+                <li>Transpiller du code SYCL vers du code C++</li>
+                <li>Transpiller du code C++ vers du code SYCL</li>
+                <li>Générer des représentations graphiques de code SYCL</li> 
+            </ul>
+            <p>Ce travail à mener à la publication d'un poster scientifique (<a href="https://dl.acm.org/doi/10.1145/3585341.3585358">lien</a>).</p>
+            <div class="technologies">
+                <p>SYCL</p>
+                <p>C++</p>
+            </div>
+        </div>
+        <img src="/static/img/logo_UBO.png"/>
+    </div>
+
+
+    <b>Avril 2021 - Août 2021</b>
+    <div class="timestamp">
+        <div class="point"></div>
+    </div>
+    <div class="card">
+        <div class="info">
+            <div class="title">
+                <h3>Stagiaire Dévellopeuse Web</h3>
+                <p><a href="https://www.capgemini.com/">Capgemini</a> - <a href="https://www.airfranceklm.com/fr">AirFrance/KLM</a></p>
+            </div>
+            <p>Maintenance d'un application de gestion des avions et vols.</p>
+            <div class="technologies">
+                <p>Angular</p>
+                <p>TypeScript</p>
+                <p>Spring Boot</p>
+                <p>Java</p>
+                <p>NoSQL</p>
+            </div>
+        </div>
+        <img src="/static/img/Capgemini_Logo.svg.png"/>
+    </div>
+
+    
+    <b>Mai 2020 - Juin 2020</b>
+    <div class="timestamp">
+        <div class="point"></div>
+    </div>
+    <div class="card">
+        <div class="info">
+            <div class="title">
+                <h3>Stagiaire Dévellopeuse Java</h3>
+                <p><a href="https://www.monacologistique.mc/">Monaco Logistique</a></p>
+            </div>
+            <p>Dévellopement d'une application Java de visualisation de statisqtiques sur les stocks de l'entreprise.</p>
+            <div class="technologies">
+                <p>Java</p>
+                <p>JavaFX</p>
+                <p>SQL</p>
+            </div>
+        </div>
+        <img src="/static/img/monaco-logistique.jpg"/>
     </div>
 </div>
 {% endblock %}

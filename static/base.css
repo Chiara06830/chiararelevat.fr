@@ -1,0 +1,68 @@
+body {
+    --main-theme-color: rgb(70, 128, 179);
+    --main-bg-color: rgb(243, 243, 243);
+
+    background-color: var(--main-bg-color);
+    font-family: system-ui;
+}
+
+main {
+    margin-top: 50px;
+}
+
+a {
+    color: var(--main-theme-color);
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 15px;
+    border-top: solid 1px var(--main-theme-color);
+    font-size: 20px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+/* ------------------ Navigation Bar ------------------ */
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-bottom: solid 1px var(--main-theme-color);
+    font-size: 20px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin-top: 0px;
+    background-color: var(--main-bg-color);
+    z-index: 1000; /* maximum to be over everything else */
+}
+
+nav div{
+    display: flex;
+    gap: 25px;
+}
+
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+#home_title {
+    color: black;
+}
+
+/* ------------------ Phone format ------------------ */
+
+@media (max-width: 600px) {
+    .intro img {
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
+    }
+}
