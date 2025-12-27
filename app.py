@@ -8,4 +8,8 @@ def index():
 
 @app.route("/experiences")
 def experiences():
-    return render_template("experiences.html", home=index)
+    return render_template("experiences.html")
+
+@app.route("/education")
+def education():
+    return render_template("education.html")
