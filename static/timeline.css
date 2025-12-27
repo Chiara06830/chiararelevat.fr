@@ -11,6 +11,12 @@
 
 }
 
+@media (max-width: 600px) {
+    .timeline {
+        --date-width: 100px;
+    }
+}
+
 /* ------------------ Date ------------------ */
 .timeline b {
     color: var(--line-color);
