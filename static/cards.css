@@ -23,6 +23,12 @@
     margin-right: 10px;
 }
 
+@media (max-width: 600px) {
+    .card {
+        display: inline;
+    }
+}
+
 .technologies {
     display: flex;
     gap: 10px;
