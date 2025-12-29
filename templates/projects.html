@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='projects.css')}}">
+{% endblock %}
+
+{% block content %}
+    <h1>Projet Académique</h1>
+    Vous trouverez ici un apperçus des projets que j'ai fait en tant qu'étudiante. 
+    <h2>Master 1 Logiciel pour Système Embarqué</h2>
+    <div class="grid">
+        <div class="card">
+            <div>
+                <img src="/static/img/dead_bot_daylight.png"/>
+                <h3>Dead Bot Daylight
+                    <a href="https://gitlab.com/GGestin/dead-bot-daylight" target="_blank">
+                        <i class="fa-brands fa-gitlab"></i>
+                    </a>
+                </h3>  
+                <p>Projet de robotique mobile ou deux robot peuvent être controllé par un front web.</p>
+                <div class="technologies">
+                    <p>TypeScript</p>
+                    <p>React</p>
+                    <p>Arduino</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <img src="/static/img/galagaga.png"/>
+                <h3>Galagaga
+                    <a href="https://gitlab.com/Teten_/projectgalagaga" target="_blank">
+                        <i class="fa-brands fa-gitlab"></i>
+                    </a>
+                </h3>  
+                <p>Remake du jeux d'arcade Galaga.</p>
+                <div class="technologies">
+                    <p>JavaScript</p>
+                    <p>FireBase</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <img src="/static/img/domus.png"/>
+                <h3>DOMUS Lang
+                    <a href="https://gitlab.com/manoconi/comp2pro" target="_blank">
+                        <i class="fa-brands fa-gitlab"></i>
+                    </a>
+                </h3>  
+                <p>Copmilateur d'un DSL de programmation de domotique pour une maison.</p>
+                <div class="technologies">
+                    <p>Lex</p>
+                    <p>Java</p>
+                    <p>JCup</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <img src="/static/img/morubo.png"/>
+                <h3>Morubo
+                    <a href="https://gitlab.com/Chiara06830/bestmorpionoftheentireworld" target="_blank">
+                        <i class="fa-brands fa-gitlab"></i>
+                    </a>
+                </h3>  
+                <p>Jeux de morpion en ligne.</p>
+                <div class="technologies">
+                    <p>Android</p>
+                    <p>Java</p>
+                    <p>FireBase</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Licence 3 Ingénieure Informatique</h2>
+    <div class="grid">
+        <div class="card">
+            <div>
+                <img src="/static/img/server_client_TCP.png"/>
+                <h3>Serveur Client TCP
+                    <a href="https://github.com/Chiara06830/Serveur_Client_TCP" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </h3>  
+                <p>Application de transport de fichiers entre un client et un serveur suivant le protocol TCP.</p>
+                <div class="technologies">
+                    <p>Java</p>
+                    <p>JavaFX</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <img src="/static/img/suitonsportif.png"/>
+                <h3>Suit ton sportif
+                    <a href="https://github.com/VLCR-UBO/Suit-ton-sportif" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </h3>  
+                <p>Application de suivi de routine sportive.</p>
+                <div class="technologies">
+                    <p>Java</p>
+                    <p>JavaFX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>DUT Informatique</h2>
+    <div class="grid">
+        <div class="card">
+            <div>
+                <img src="/static/img/shadow_hunters.jpg"/>
+                <h3>Shadow Hunter</h3>  
+                <p>Digitalisation du jeux de plateau Shadow Hunter.</p>
+                <div class="technologies">
+                    <p>Java</p>
+                    <p>JavaFX</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <img src="/static/img/europeanscountry.png"/>
+                <h3>Découvre les pays d'europes</h3>  
+                <p>Application mobile de quizz sur les pays d'europes.</p>
+                <div class="technologies">
+                    <p>Java</p>
+                    <p>Android</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

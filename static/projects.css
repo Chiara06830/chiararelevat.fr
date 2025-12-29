@@ -1,0 +1,9 @@
+.grid {
+    text-align: center;
+}
+
+.grid .card img{
+    margin-top: 10px;
+    max-height: 180px;
+    border: solid 2px grey;
+}

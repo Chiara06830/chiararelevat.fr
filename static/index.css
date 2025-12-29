@@ -10,24 +10,17 @@
     border-radius: 50px;
 }
 
+@media (max-width: 600px) {
+    .intro img {
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
+    }
+}
+
 .network a {
     border: solid;
     margin: 2px;
     padding: 1px;
     border-radius: 10px;
-}
-
-.semestre {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
-    align-items: flex-start;
-}
-
-@media (max-width: 600px) {
-    .semestre {
-        display: grid;
-        grid-template-columns: auto;
-        gap: 10px;
-    }
 }

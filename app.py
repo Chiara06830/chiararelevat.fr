@@ -13,3 +13,7 @@ def experiences():
 @app.route("/education")
 def education():
     return render_template("education.html")
+
+@app.route("/projects")
+def projects():
+    return render_template("projects.html")

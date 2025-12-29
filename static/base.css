@@ -33,18 +33,25 @@ nav {
     padding: 10px;
     margin-bottom: 5px;
     border-bottom: solid 1px var(--main-theme-color);
-    font-size: 20px;
+    font-size: minmax(10px, 20px);
     top: 0px;
     left: 0px;
     right: 0px;
     margin-top: 0px;
     background-color: var(--main-bg-color);
     z-index: 1000; /* maximum to be over everything else */
+    height: 30px;
+    align-items: center;
 }
 
 nav div{
     display: flex;
     gap: 25px;
+    margin-right: 10px;
+}
+
+nav b {
+    font-size: minmax(10px, 40px);
 }
 
 .icon::before {
@@ -57,12 +64,64 @@ nav div{
     color: black;
 }
 
-/* ------------------ Phone format ------------------ */
+/* ------------------ Grid ------------------ */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    align-items: flex-start;
+}
 
 @media (max-width: 600px) {
-    .intro img {
-        width: 100px;
-        height: 100px;
-        margin-top: 50px;
+    .grid {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
     }
+}
+
+/* ------------------ Cards ------------------ */
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 3px 3px rgb(189, 208, 221);
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .title {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.card img {
+    width: auto;
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .card {
+        display: inline;
+    }
+}
+
+.technologies {
+    display: flex;
+    gap: 10px;
+}
+
+.technologies p {
+    background-color: #00c7e6;
+    padding: 5px;
+    color: #0b2549;
+    border-radius: 10px;
 }
