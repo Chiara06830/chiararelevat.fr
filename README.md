@@ -1,6 +1,7 @@
 ## Development
 
 This website is develloped with [Flask](https://flask.palletsprojects.com/).
+And it uses [Poetry](https://python-poetry.org/) for handling dependencies.
 
 ### Requirement
 
@@ -8,28 +9,20 @@ This website is develloped with [Flask](https://flask.palletsprojects.com/).
 
 ### Installing website
 
-1. Create a python environment
-
-```bash
-python3 -m venv .venv
+1. Check you have poetry installed
+```
+poetry --version
 ```
 
-2. Activate this environmen
-
-   ```bash
-   . .venv/bin/activate
-   ```
-3. Install Flask and dependencies
-
-   ```bash
-   pip install -r requirements.txt
-   ```
+2. Install dependencies
+```
+poetry install
+```
 
 ### Launching website locally
 
 ```bash
-. .venv/bin/activate
-flask --app app run --debug
+poetry run flask --app app run --debug
 ```
 
 The server will be running on [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
