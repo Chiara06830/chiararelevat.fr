@@ -14,7 +14,7 @@ This website is develloped with [Flask](https://flask.palletsprojects.com/).
 python3 -m venv .venv
 ```
 
-2. Activate this environmen
+2. Activate this environment
 
    ```bash
    . .venv/bin/activate
