@@ -6,9 +6,10 @@ authors = [
     {name = "Chiara RELEVAT",email = "chiara.relevat@outlook.fr"}
 ]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
-    "flask (>=3.1.2,<4.0.0)"
+    "flask (>=3.1.2,<4.0.0)",
+    "pytest (>=9.0.2,<10.0.0)"
 ]
 
 [tool.poetry]

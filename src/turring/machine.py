@@ -7,15 +7,17 @@ type transition_rule = dict[int, tuple[str, int, str]]
 class TurringMachine:
     """Turing Machine"""
     def __init__(self, initial_state: str, final_state: str,
-                 rules: dict[str, list[transition_rule]]):
+                 rules: dict[str, list]):
         """Initialisation of a turing machine
 
         Args:
             initial_state (str): _description_
             final_state (str): _description_
-            rules (dict[str, list[dict[rule]]):
+            rules (dict[str, list[transition_rule]]):
                 set of rules with the form
-                state : { letter_read: (letter_written, movement, new_state)}
+                state : { 
+                    letter_read: (letter_written, movement, new_state)
+                }
                 For example the set of rule described with this array
                 | State  | read      | written   | movement     | next    |
                 | ------ | --------- | --------- | ------------ | ------- |
@@ -50,10 +52,11 @@ class Configuration:
     def __str__(self) -> str:
         result: str = ""
         for i in range(0, len(self.ribbon)):
+            ribbon_value: str = self.ribbon[i] if self.ribbon[i] is not None else "."
             if i == self.__pos:
-                result += self.ribbon[i] + "(" + self.state + ")"
+                result += "-" + ribbon_value + "(" + self.state + ")" + "-"
             else:
-                result += str(self.ribbon[i])
+                result += str(ribbon_value)
         return result
 
     def read(self):
@@ -81,12 +84,23 @@ class Configuration:
         # If we move outside of the ribbon we had empty element
         if self.__pos < 0:
             self.ribbon.appendleft(None)
-        elif self.__pos > len(self.ribbon):
+        elif self.__pos >= len(self.ribbon):
             self.ribbon.append(None)
         self.state = next_state  # 3. changing state
 
+    def print_ribbon_value(self) -> str:
+        """_summary_
 
-def calcul(machine: TurringMachine, input: list) -> str:
+        Returns:
+            _type_: _description_
+        """
+        result: str = ""
+        for elem in self.ribbon:
+            result += elem if elem is not None else "."
+        return result
+
+
+def calcul(machine: TurringMachine, input: deque) -> str:
     """_summary_
 
     Args:
@@ -100,4 +114,5 @@ def calcul(machine: TurringMachine, input: list) -> str:
             machine.rules[config.state][config.read()]
         config.next(letter, movement, next_state)
         print(config)
-    return config.ribbon
+        
+    return config.print_ribbon_value()

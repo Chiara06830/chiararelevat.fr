@@ -3,10 +3,6 @@
 This website is develloped with [Flask](https://flask.palletsprojects.com/).
 And it uses [Poetry](https://python-poetry.org/) for handling dependencies.
 
-### Requirement
-
-- Python >= 3
-
 ### Installing website
 
 1. Check you have poetry installed
@@ -26,6 +22,11 @@ poetry run flask --app app run --debug
 ```
 
 The server will be running on [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
+
+### Testing packages
+```bash
+poetry run python3 -m pytest test
+```
 
 ## Deployment
 
