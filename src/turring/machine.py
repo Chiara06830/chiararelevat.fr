@@ -4,10 +4,11 @@ from collections import deque
 
 type transition_rule = dict[int, tuple[str, int, str]]
 
+
 class TurringMachine:
     """Turing Machine"""
     def __init__(self, initial_state: str, final_state: str,
-                 rules: dict[str, list]):
+                 rules: dict[str, list[transition_rule]]):
         """Initialisation of a turing machine
 
         Args:

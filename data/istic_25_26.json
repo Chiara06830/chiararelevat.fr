@@ -1,0 +1,100 @@
+[
+    {
+        "initials":"ACE",
+        "name":"Algorithme et Compléxité Expérimentale",
+        "level":"Licence 1 ISTN",
+        "professor": "Thomas GENET",
+        "link_professor": "https://people.irisa.fr/Thomas.Genet/",
+        "tags":["Java"]
+    },
+    {
+        "initials":"PO",
+        "name":"Programmation Objet",
+        "level":"Licence 2 ISTN",
+        "professor": "Alexandre TERMIER",
+        "link_professor": "https://people.irisa.fr/Alexandre.Termier/",
+        "tags":["Java"]
+    },
+    {
+        "initials":"WEB",
+        "name":"Base de la programmation web",
+        "level":"Licence 2 ISTN",
+        "professor": "Fabien GUNTZ",
+        "link_professor": "https://istic.univ-rennes.fr/interlocuteurs/fabien-guntz",
+        "tags":["HTML", "CSS", "Python", "Flask"]
+    },
+    {
+        "initials":"GEN",
+        "name":"Génie Logiciel",
+        "link_class": "https://people.irisa.fr/Jean-Marc.Jezequel/enseignement/L2GEN/",
+        "level":"Licence 2 ISTN",
+        "professor": "Jean Marc JEZEQUEL",
+        "link_professor": "https://people.irisa.fr/Jean-Marc.Jezequel/",
+        "tags":["Git", "Java", "Java Swing"]
+    },
+    {
+        "initials":"PRA",
+        "name":"Programmation Avancé",
+        "level":"Licence 3 Informatique",
+        "professor": "Véronique MASSON",
+        "tags":["Java"]
+    },
+    {
+        "initials":"BMO",
+        "name":"Base de la Modélisation Objet",
+        "level":"Licence 3 Informatique",
+        "professor": "Jean Marc JEZEQUEL",
+        "link_professor": "https://people.irisa.fr/Jean-Marc.Jezequel/",
+        "tags":["Git", "Java", "Java Swing"]
+    },
+    {
+        "initials":"NJava",
+        "name":"Remise à niveau Java",
+        "level":"Licence 3 MIAGE",
+        "professor": "Mickaël FOURSOV",
+        "link_professor": "https://istic.univ-rennes.fr/interlocuteurs/mickael-foursov",
+        "tags":["Java"]
+    },
+    {
+        "initials":"WE",
+        "name":"Web Engineering",
+        "link_class": "https://olivier.barais.fr/d/teaching/we",
+        "level":"Master 1 Ingénieurie Logiciel",
+        "professor": "Olivier BARAIS",
+        "link_professor": "https://olivier.barais.fr/",
+        "tags":["Java"]
+    },
+    {
+        "initials":"SSYS",
+        "name":"Sécurité des SYStème informatique",
+        "level":"Master 1 Cyber - Réseau et Sécurité des Systèmes Informatiques",
+        "professor": "Olivier BARAIS",
+        "link_professor": "https://olivier.barais.fr/",
+        "tags":["GitLab CI", "Docker", "Flask"]
+    },
+    {
+        "initials":"IPD",
+        "name":"Programmation réseau en Java",
+        "level":"Master 1 Cloud et Réseau & Master 1 Ingénieurie Logicielle",
+        "professor": "Olivier BARAIS",
+        "link_professor": "https://olivier.barais.fr/",
+        "tags":["GitLab CI", "Docker", "Flask"]
+    },
+    {
+        "initials":"MOB",
+        "name":"Programmation Mobile Android",
+        "level":"Master 1 MIAGE",
+        "professor": "Mickaël FOURSOV",
+        "link_professor": "https://istic.univ-rennes.fr/interlocuteurs/mickael-foursov",
+        "tags":["Android Studio", "Kotlin"]
+    },
+    {
+        "initials":"ASE",
+        "name":"Advanced Software Engineering",
+        "link_class": "https://stephaniechallita.github.io/ase/",
+        "level":"Troisième année du cycle ingénieur en ingénieurie logicielle",
+        "professor": "Stéphanie CHALLITA",
+        "link_professor": "https://stephaniechallita.github.io/",
+        "tags":["EMF", "Xtext", "Langium", "TypeScript"]
+    }
+]

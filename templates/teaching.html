@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="grid">
+    {% for clazz in classes %}
+    <a href={{clazz.link_class}}>
+        <div class="card">
+                <p><b>{{clazz.initials}}</b> - {{clazz.name}}</p>
+                <p><i>{{clazz.level}}</i></p>
+                <p>{{clazz.professor}}</p>
+                <div class="tags">
+                    {% for tag in clazz.tags %}
+                        <p>{{tag}}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+    </div>
+{% endblock content %}
