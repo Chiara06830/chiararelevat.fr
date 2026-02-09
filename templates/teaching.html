@@ -3,7 +3,7 @@
 {% block content %}
     <div class="grid">
     {% for clazz in classes %}
-    <a href={{clazz.link_class}}>
+    <a href={{clazz.link_class}} onMouseOver="this.style.transform= 'scale(1.01)'">
         <div class="card">
                 <p><b>{{clazz.initials}}</b> - {{clazz.name}}</p>
                 <p><i>{{clazz.level}}</i></p>

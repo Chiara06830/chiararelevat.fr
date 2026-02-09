@@ -99,10 +99,6 @@ nav b {
     color: black;
 }
 
-.card:hover {
-    transform: scale(1.01);
-}
-
 .card .title {
     display: flex;
     gap: 15px;
@@ -112,6 +108,7 @@ nav b {
 .card img {
     width: auto;
     max-height: 50px;
+    max-width: 200px;
     margin-right: 10px;
     overflow: hidden;
 }
@@ -136,4 +133,9 @@ nav b {
     padding: 5px;
     color: var(--tag-text-color);
     border-radius: 10px;
+}
+
+/* ------------------ Utilities ------------------ */
+.line {
+    display: flex;
 }

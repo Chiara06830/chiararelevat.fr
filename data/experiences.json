@@ -1,0 +1,76 @@
+[
+    {
+        "name":"Enseignante contractuelle",
+        "dates": "Sept. 2024 - Aujourd'hui",
+        "companies": [
+            {"name": "ISTIC",
+            "link":"https://istic.univ-rennes.fr/"}, 
+            {"name": "ESIR",
+            "link":"https://esir.univ-rennes.fr/"},
+            {"name": "Université de Rennes",
+            "link": "https://www.univ-rennes.fr/"}
+        ],
+        "description": "Détails des enseignements sur <a href='/teaching'>la page dédier a mes enseignements</a>.",
+        "tags": [],
+        "logos": ["/static/img/logoisticfr.png", "/static/img/UNIRENNES_LOGOnoir_0.png", "/static/img/esir.png"]
+    },
+    {
+        "name":"Ingénieure de recherche",
+        "dates": "Sept. 2023 - Août 2024",
+        "companies": [
+            {"name": "Centre Inria de l'université de Rennes",
+            "link":"https://www.inria.fr/en/inria-centre-rennes-university"}
+        ],
+        "description": "Dévellopement d'une famille de DSL pour le rootage de paquet IPv6 sur un réseau.</br>+ Enseignement contractuelle à l'<a href='https://www.insa-rennes.fr/index.html'>INSA</a> sur des cours de Java en première année de prépa.",
+        "tags": ["GEMOC studio", "EMF", "Java", "Kermeta 3", "Xtext"],
+        "logos": ["/static/img/UNIRENNES_LOGOnoir_0.png", "/static/img/irisa.png", "/static/img/inria.jpg", "/static/img/Insa-rennes-logo.svg.png"]
+    },
+    {
+        "name":"Stagiaire Dévellopeuse Back-End",
+        "dates": "Avril 2023 - Août 2023",
+        "companies": [
+            {"name": "Vivadrive",
+            "link":"https://vivadrive.io/"}
+        ],
+        "description": "Dévellopement d'une API pour calculer le coût de l'usure d'une voiture a travers les années.",
+        "tags": ["Django", "Python"],
+        "logos": ["/static/img/vivadrive-logo-dark.jpg"]
+    },
+    {
+        "name":"Stage de recherche",
+        "dates": "Mai 2022 - Juin 2022",
+        "companies": [
+            {"name": "Université de Bretagne Occidentale",
+            "link":"https://www.univ-brest.fr/faculte-sciences/fr?q=en"},
+            {"name": "Thales",
+            "link":"https://www.thalesgroup.com/"}
+        ],
+        "description": "<i>Objectif :</i> Rendre l'environnement <a href='https://www.khronos.org/sycl/'>SYCL</a> de <a href='https://www.intel.com/'>Intel</a> accessible aux dévellopers de C++.</p><p>Dévellopement d'une librarie C++ qui permet de :</p><ul><li>Transpiller du code SYCL vers du code C++</li><li>Transpiller du code C++ vers du code SYCL</li><li>Générer des représentations graphiques de code SYCL</li></ul><p>Ce travail à mener à la publication d'un poster scientifique (<a href='https://dl.acm.org/doi/10.1145/3585341.3585358'>lien</a>).",
+        "tags": ["SYCL", "C++"],
+        "logos": ["/static/img/logo_UBO.png", "/static/img/Thales_Logo.svg.png"]
+    },
+    {
+        "name":"Stagiaire Dévellopeuse Web",
+        "dates": "Avril 2021 - Août 2021",
+        "companies": [
+            {"name": "Capgemini",
+            "link":"https://www.capgemini.com/"},
+            {"name":"AirFrance/KLM", 
+            "link":"https://www.airfranceklm.com/fr"}
+        ],
+        "description": "Maintenance d'un application de gestion des avions et vols.",
+        "tags": ["Angular", "TypeScript", "Spring Boot", "Java", "NoSQL"],
+        "logos": ["/static/img/Capgemini_Logo.svg.png", "/static/img/airfrance.png"]
+    },
+    {
+        "name":"Stagiaire Dévellopeuse Java",
+        "dates": "Mai 2020 - Juin 2020",
+        "companies": [
+            {"name": "Monaco Logistique",
+            "link":"https://www.monacologistique.mc/"}
+        ],
+        "description": "Dévellopement d'une application Java de visualisation de statisqtiques sur les stocks de l'entreprise.",
+        "tags": ["Java", "JavaFX", "SQL"],
+        "logos": ["/static/img/monaco-logistique.jpg"]
+    }
+]

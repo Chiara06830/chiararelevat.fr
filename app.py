@@ -29,7 +29,14 @@ def teaching():
 
 @app.route("/experiences")
 def experiences():
-    return render_template("experiences.html")
+    exepriences_file = (
+        Path(__file__).parent / "data" / "experiences.json"
+    )
+    with open(exepriences_file, "r", encoding="utf-8") as f:
+        experiences: list[dict[str, Any]] = \
+            cast(list[dict[str, Any]], json.load(f))
+
+    return render_template("experiences.html", experiences=experiences)
 
 
 @app.route("/education")
