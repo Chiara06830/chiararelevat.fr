@@ -18,7 +18,7 @@ def index():
 @app.route("/teaching")
 def teaching():
     teaching_file = (
-        Path(__file__).parent / "data" / "istic_25_26.json"
+        Path(__file__).parent / "data" / "teaching2526.json"
     )
     with open(teaching_file, "r", encoding="utf-8") as f:
         classes: list[dict[str, Any]] = \
@@ -41,7 +41,14 @@ def experiences():
 
 @app.route("/education")
 def education():
-    return render_template("education.html")
+    education_file = (
+        Path(__file__).parent / "data" / "education.json"
+    )
+    with open(education_file, "r", encoding="utf-8") as f:
+        educations: list[dict[str, Any]] = \
+            cast(list[dict[str, Any]], json.load(f))
+
+    return render_template("education.html", educations=educations)
 
 
 @app.route("/projects")

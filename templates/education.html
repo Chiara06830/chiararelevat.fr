@@ -6,75 +6,25 @@
 
 {% block content %}
 <div class="timeline">
-    
-    <b>Sept. 2021 - Sept. 2023</b>
-    <div class="timestamp">
-        <div class="point"></div>
-    </div>
-    <div class="card">
-        <div class="info">
-            <div class="title">
-                <h3>Master Logiciel pour Système Embarqué</h3>
-                <p><a href="https://www.univ-brest.fr/faculte-sciences/fr?q=en">Université de Bretagne Occidentale</a></p>
+    {% for education in educations %}
+        <b>{{education.dates}}</b>
+        <div class="timestamp">
+            <div class="point"></div>
+        </div>
+        <div class="card line">
+            <div>
+                <div class="info">
+                    <div class="title">
+                        <b style="color:black;">{{education.name}}</b>
+                        <p><a href={{education.link}}>{{education.school}}</a></p>
+                    </div>
+                </div>
+                <p>{{education.description | safe}}</p>
+            </div>
+            <div>
+                <img src={{education.logo}}/>
             </div>
         </div>
-        <img src="/static/img/logo_UBO.png"/>
-    </div>
-
-    <b>Sept. 2022 - Janv. 2023</b>
-    <div class="timestamp">
-        <div class="point"></div>
-    </div>
-    <div class="card">
-        <div class="info">
-            <div class="title">
-                <h3>Semestre à l'étranger</h3>
-                <p><a href="https://www.univr.it/en/home">Université de Véronne</a></p>
-            </div>
-        </div>
-        <img src="/static/img/logo-univr-colori-80.png"/>
-    </div>
-
-    <b>Sept. 2020 - Août 2021</b>
-    <div class="timestamp">
-        <div class="point"></div>
-    </div>
-    <div class="card">
-        <div class="info">
-            <div class="title">
-                <h3>Licence 3 Ingénieurie Informatique</h3>
-                <p><a href="https://www.univ-brest.fr/faculte-sciences/fr?q=en">Université de Bretagne Occidentale</a></p>
-            </div>
-        </div>
-        <img src="/static/img/logo_UBO.png"/>
-    </div>
-
-    <b>Sept. 2018 - Août 2020</b>
-    <div class="timestamp">
-        <div class="point"></div>
-    </div>
-    <div class="card">
-        <div class="info">
-            <div class="title">
-                <h3>DUT Informatique</h3>
-                <p><a href="https://univ-cotedazur.eu/">IUT Informatique, Université Côte d'Azur</a></p>
-            </div>
-        </div>
-        <img src="/static/img/logo-unice.jpg"/>
-    </div>
-
-    <b>Sept. 2015 - Juin 2018</b>
-    <div class="timestamp">
-        <div class="point"></div>
-    </div>
-    <div class="card">
-        <div class="info">
-            <div class="title">
-                <h3>Lycée</h3>
-                <p><a href="https://lyceedelamontagne.fr/">Lycée de la montagne</a></p>
-            </div>
-        </div>
-        <img src="/static/img/logo-lycee.png"/>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}

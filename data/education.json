@@ -1,0 +1,38 @@
+[
+    {
+        "name":"Master Logiciel pour Système Embarqué",
+        "school":"Université de Bretagne Occidentale",
+        "link":"https://www.univ-brest.fr/faculte-sciences/fr?q=en",
+        "dates":"Sept. 2021 - Sept. 2023",
+        "logo":"/static/img/logo_UBO.png"
+    },
+    {
+        "name":"Semestre à l'étranger",
+        "school":"Université de Véronne",
+        "link":"https://www.univr.it/en/home",
+        "dates":"Sept. 2022 - Janv. 2023",
+        "logo":"/static/img/logo-univr-colori-80.png"
+    },
+    {
+        "name":"Licence 3 Ingénieurie Informatique",
+        "school":"Université de Bretagne Occidentale",
+        "link":"https://www.univ-brest.fr/faculte-sciences/fr?q=en",
+        "dates":"Sept. 2020 - Août 2021",
+        "logo":"/static/img/logo_UBO.png"
+    },
+    {
+        "name":"DUT Informatique",
+        "school":"Université Côte d'Azur",
+        "link":"https://univ-cotedazur.eu/",
+        "dates":"Sept. 2018 - Août 2020",
+        "logo":"/static/img/logo-unice.jpg"
+    },
+    {
+        "name":"Baccalauréat Scientifique",
+        "school":"Lycée de la montagne",
+        "link":"https://lyceedelamontagne.fr/",
+        "dates":"Sept. 2015 - Juin 2018",
+        "description":"<ul><li>spécialité mathématique</li><li>option lourde sport</li><li>option théatre</li></ul>",
+        "logo":"/static/img/logo-lycee.png"
+    }
+]
