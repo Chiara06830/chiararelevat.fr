@@ -33,3 +33,22 @@ poetry run python3 -m pytest test
 The website is deployed thanks to [PythonAnyWhere](https://www.pythonanywhere.com/).
 
 You can find the deployed version on [chiara06830.pythonanywhere.com](https://chiara06830.pythonanywhere.com/).
+
+## Write module in C or Ocaml
+There is a setup that allow execute code written in C and Ocaml.
+The `src` file has three packages, one for python, one for c and one for ocaml.
+
+To compile c code run
+```
+make c
+```
+To compile ocaml run 
+```
+make ocaml
+```
+
+Then binaries can be run with 
+```python
+from src.backend.services.native_runner import run_binary
+run_binary("./bin/helloworld_ocaml.x", "")
+```
