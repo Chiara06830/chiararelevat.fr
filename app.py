@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 from typing import Any, cast
 from flask import Flask, render_template
+from src.backend.services.native_runner import run_binary
 
 app = Flask(__name__)
 
@@ -54,3 +55,15 @@ def education():
 @app.route("/projects")
 def projects():
     return render_template("projects.html")
+
+
+@app.route("/ocaml")
+def ocaml_exec():
+    result = run_binary("./bin/helloworld_ocaml.x", "")
+    return result["stdout"]
+
+
+@app.route("/c")
+def c_exec():
+    result = run_binary("./bin/helloworld_c.x", "")
+    return result["stdout"]
