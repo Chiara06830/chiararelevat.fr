@@ -1,0 +1,72 @@
+[
+    {
+        "name":"Dead Bot Daylight",
+        "diploma": "Master 1 Logiciel pour Système Embarqué",
+        "image":"/static/img/dead_bot_daylight.png",
+        "link":"https://gitlab.com/GGestin/dead-bot-daylight",
+        "logo_link": "fa-brands fa-gitlab",
+        "description":"Projet de robotique mobile ou deux robot peuvent être controllé par un front web.",
+        "tags":["React", "TypeScript", "Arduino"]
+    },
+    {
+        "name":"Galagaga",
+        "diploma": "Master 1 Logiciel pour Système Embarqué",
+        "image":"/static/img/galagaga.png",
+        "link":"https://gitlab.com/Teten_/projectgalagaga",
+        "logo_link": "fa-brands fa-gitlab",
+        "description":"Remake du jeux d'arcade Galaga.",
+        "tags":["JavaScript", "FireBase"]
+    },
+    {
+        "name":"DOMUS lang",
+        "diploma": "Master 1 Logiciel pour Système Embarqué",
+        "image":"/static/img/domus.png",
+        "link":"https://gitlab.com/manoconi/comp2pro",
+        "logo_link": "fa-brands fa-gitlab",
+        "description":"Copmilateur d'un DSL de programmation de domotique pour une maison.",
+        "tags":["Lex", "JCup", "Java"]
+    },
+    {
+        "name":"Morubo",
+        "diploma": "Master 1 Logiciel pour Système Embarqué",
+        "image":"/static/img/morubo.png",
+        "link":"https://gitlab.com/Chiara06830/bestmorpionoftheentireworld",
+        "logo_link": "fa-brands fa-gitlab",
+        "description":"Jeux de morpion en ligne.",
+        "tags":["Android", "Java", "Firebase"]
+    },
+    {
+        "diploma": "Licence 3 Ingénieure Informatique",
+        "name":"Serveur Client TCP",
+        "image":"/static/img/server_client_TCP.png",
+        "link":"https://github.com/Chiara06830/Serveur_Client_TCP",
+        "logo_link": "fa-brands fa-github",
+        "description":"Application de transfert de fichiers entre un client et un serveur suivant le protocol TCP.",
+        "tags":["Java", "JavaFX"]
+    },
+    {
+        "diploma": "Licence 3 Ingénieure Informatique",
+        "name":"Suit ton sportif",
+        "image":"/static/img/suitonsportif.png",
+        "link":"https://github.com/VLCR-UBO/Suit-ton-sportif",
+        "logo_link": "fa-brands fa-github",
+        "description":"Application de suivi de routine sportive.",
+        "tags":["Java", "JavaFX"]
+    },
+    {
+        "diploma": "DUT Informatique",
+        "name":"Shadow Hunter",
+        "image":"/static/img/shadow_hunters.jpg",
+        "description":"Digitalisation du jeux de plateau Shadow Hunter.",
+        "tags":["Java", "JavaFX"]
+    },
+    {
+        "diploma": "DUT Informatique",
+        "name":"Découvre les pays d'europes",
+        "image":"/static/img/europeanscountry.png",
+        "link":"https://github.com/Chiara06830/Decouvrir-les-pays-d-Europe",
+        "logo_link": "fa-brands fa-github",
+        "description":"Application mobile de quizz sur les pays d'europes.",
+        "tags":["Android", "Java"]
+    }
+]
