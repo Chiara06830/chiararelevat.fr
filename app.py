@@ -4,8 +4,11 @@ description
 
 import json
 from pathlib import Path
-from flask import Flask, render_template
-from src.backend.services.native_runner import run_binary
+from flask import Flask, render_template, request
+from src.backend.services.native_runner import \
+    run_binary, \
+    compile_single_file_ocaml, \
+    compile_single_file_c
 
 app = Flask(__name__)
 
@@ -92,13 +95,63 @@ def projects():
 
 @app.route("/ocaml")
 def ocaml_exec():
-    """execute ocaml hello world
+    """display hellow world in ocaml and execute it
 
     Returns:
-        str: the standard output of the hello world program
+        str: HTML for the playground ocaml page
     """
-    result = run_binary("./bin/helloworld_ocaml.x", "")
-    return result["stdout"]
+    hellowordl_ocaml_file = (
+        Path(__file__).parent / "src" / "ocaml" / "helloworld_ocaml.ml"
+    )
+    with open(hellowordl_ocaml_file, "r", encoding="utf-8") as f:
+        content = f.read()
+    with open("src/ocaml/playground_ocaml.ml", "w", encoding="utf-8") as f:
+        f.write(content)
+    compile_single_file_ocaml("src/ocaml/playground_ocaml.ml")
+    result = run_binary("bin/playground_ocaml.x", "")
+    return render_template(
+            "ocaml_runner.html",
+            file_content=content,
+            result=result
+        )
+
+
+@app.route("/compile_ocaml", methods=["POST"])
+def compile_ocaml():
+    """compile ocaml code from the form
+
+    Returns:
+        str: HTML for the playground ocaml page
+    """
+    code = request.form.get("code", "")
+    with open("src/ocaml/playground_ocaml.ml", "w", encoding="utf-8") as f:
+        f.write(code)
+
+    compilation = compile_single_file_ocaml("src/ocaml/playground_ocaml.ml")
+    return render_template(
+            "ocaml_runner.html",
+            file_content=code,
+            result=compilation
+        )
+
+
+@app.route("/run_ocaml", methods=["POST"])
+def run_ocaml():
+    """run ocaml code that has been previously compiled
+
+    Returns:
+        str: HTML for the playground ocaml page
+    """
+    code = request.form.get("code", "")
+    with open("src/ocaml/playground_ocaml.ml", "w", encoding="utf-8") as f:
+        f.write(code)
+
+    execution = run_binary("bin/playground_ocaml.x")
+    return render_template(
+            "ocaml_runner.html",
+            file_content=code,
+            result=execution
+        )
 
 
 @app.route("/c")
@@ -108,5 +161,6 @@ def c_exec():
     Returns:
         str: the standard output of the hello world program
     """
-    result = run_binary("./bin/helloworld_c.x", "")
+    compile_single_file_c("src/c/helloworld.c")
+    result = run_binary("./bin/helloworld_c.x")
     return result["stdout"]

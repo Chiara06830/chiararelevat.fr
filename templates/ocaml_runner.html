@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='codeblock.css')}}">
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/languages/go.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+
+    <script>
+        function syncPre() {
+            document.getElementById("hiddenInput").value =
+            document.getElementById("editor").innerText;
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <form method="post" onsubmit="syncPre()">
+        <pre name="code" contenteditable="true">
+            <code id="editor">{{file_content}}</code>
+        </pre>
+        <input type="hidden" name="code" id="hiddenInput">
+
+        <h2>Terminal</h2>
+        <input type="submit" formaction="/compile_ocaml" value="Compile">
+        {% if result["stderr"] %}
+            <input type="submit" formaction="/run_ocaml" value="Execute" disabled>
+        {% else %}
+            <input type="submit" formaction="/run_ocaml" value="Execute">
+        {% endif %}
+        <p>${{result["executed_line"]}}</p>
+        <p>Sortie standard</p>
+        <p>{{result["stdout"]}}</p>
+        <p>Sortie d'erreure</p>
+        <p>{{result["stderr"]}}</p>
+        <p>Code de retour</p>
+        <p>{{result["returncode"]}}</p>
+    </form>
+{% endblock %}
