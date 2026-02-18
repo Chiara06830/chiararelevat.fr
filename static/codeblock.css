@@ -1,8 +1,31 @@
-.codeblock {
-    background-color: black;
-    color: white;
+code-input {
+    border: solid 1px;
 }
 
-textarea {
+.tab-content {
+    top:0;
+    border: solid 1px;
+    position:absolute;
     width: 100%;
+    height: 6rem;
+    margin-top: 2px;
+}
+
+#stderr {
+    visibility: collapse;
+}
+
+#returncode {
+    visibility: collapse;
+}
+
+.terminal {
+    position: relative;
+    height: 20%;
+    width: 100%;
+    margin-bottom: 7rem;
+}
+
+.command {
+    color: green;
 }

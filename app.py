@@ -5,12 +5,14 @@ description
 import json
 from pathlib import Path
 from flask import Flask, render_template, request
+from flask_bootstrap import Bootstrap
 from src.backend.services.native_runner import \
     run_binary, \
     compile_single_file_ocaml, \
     compile_single_file_c
 
 app = Flask(__name__)
+Bootstrap(app)
 
 
 @app.route("/")

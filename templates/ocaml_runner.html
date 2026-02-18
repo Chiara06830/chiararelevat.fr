@@ -2,42 +2,74 @@
 
 {% block head %}
     <link rel="stylesheet" href="{{url_for('static', filename='codeblock.css')}}">
-    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
-    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/highlight.min.js"></script>
-
-    <!-- and it's easy to individually load additional languages -->
-    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/languages/go.min.js"></script>
-
-    <script>hljs.highlightAll();</script>
 
     <script>
         function syncPre() {
             document.getElementById("hiddenInput").value =
-            document.getElementById("editor").innerText;
+            document.getElementById("code").innerText;
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30/themes/prism.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30/components/prism-core.min.js" data-manual></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@2.8/code-input.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@2.8/code-input.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@2.8/plugins/indent.min.js"></script>
+    <script>
+        codeInput.registerTemplate("syntax-highlighted", new codeInput.templates.Prism(Prism, [new codeInput.plugins.Indent()]));
+    </script>
+
+    <script>
+        function switchTab(event, sectionId) {
+            var tabs = document.getElementsByClassName("tab-content")
+            for (let i in tabs) {
+                item = tabs[i]
+                console.log(item)
+                if (item.id !== sectionId) {
+                    item.style.visibility = "collapse"
+                } else if(item.id === sectionId) {
+                    item.style.visibility = "visible"
+                }
+            }
         }
     </script>
 {% endblock %}
 
 {% block content %}
     <form method="post" onsubmit="syncPre()">
-        <pre name="code" contenteditable="true">
-            <code id="editor">{{file_content}}</code>
-        </pre>
+        <h1>Playground OCaml</h1>
+        <code-input language="OCaml"><textarea data-code-input-fallback id="code">{{file_content}}</textarea></code-input>
         <input type="hidden" name="code" id="hiddenInput">
 
-        <h2>Terminal</h2>
         <input type="submit" formaction="/compile_ocaml" value="Compile">
         {% if result["stderr"] %}
-            <input type="submit" formaction="/run_ocaml" value="Execute" disabled>
+        <input type="submit" formaction="/run_ocaml" value="Execute" disabled>
         {% else %}
-            <input type="submit" formaction="/run_ocaml" value="Execute">
+        <input type="submit" formaction="/run_ocaml" value="Execute">
         {% endif %}
-        <p>${{result["executed_line"]}}</p>
-        <p>Sortie standard</p>
-        <p>{{result["stdout"]}}</p>
-        <p>Sortie d'erreure</p>
-        <p>{{result["stderr"]}}</p>
-        <p>Code de retour</p>
-        <p>{{result["returncode"]}}</p>
     </form>
+    <button class="tab-header" onClick="switchTab(event, 'stdout')">
+        Sortie standard
+    </button>
+    <button class="tab-header" onClick="switchTab(event, 'stderr')">
+        Sortie d'erreure
+    </button>
+    <button class="tab-header" onClick="switchTab(event, 'returncode')">
+        Code de retour
+    </button>
+    <div class="terminal">
+        <div class="tab-content" id="stdout">
+            <p class="command">$ {{result["executed_line"]}}</p>
+            <p>{{result["stdout"]}}</p>
+        </div>
+        <div class="tab-content" id="stderr">
+            <p class="command">$ {{result["executed_line"]}}</p>
+            <p>{{result["stderr"]}}</p>
+        </div>
+        <div class="tab-content" id="returncode">
+            <p class="command">$ {{result["executed_line"]}}</p>
+            <p>{{result["returncode"]}}</p>
+        </div>
+    </div>
 {% endblock %}
