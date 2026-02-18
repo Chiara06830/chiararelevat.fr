@@ -22,14 +22,30 @@
 
     <script>
         function switchTab(event, sectionId) {
+            // changement d'affichage du terminal
             var tabs = document.getElementsByClassName("tab-content")
             for (let i in tabs) {
                 item = tabs[i]
-                console.log(item)
-                if (item.id !== sectionId) {
+                if (item.id !== undefined && item.id !== sectionId) {
                     item.style.visibility = "collapse"
                 } else if(item.id === sectionId) {
                     item.style.visibility = "visible"
+                }
+            }
+
+            // changement de style du bouton
+            var button_selected = event.target
+            var btns = document.getElementsByClassName("tab-header")
+            for (let i in btns) {
+                btn = btns[i]
+                if (btn.style !== undefined) {
+                    if (btn === button_selected) {
+                        button_selected.style.backgroundColor = window.getComputedStyle(document.body).getPropertyValue('--main-bg-color')
+                        button_selected.style.border = "solid 1px"
+                    } else {
+                        btn.style.backgroundColor = "#b5b5b5"
+                        btn.style.border = "none"
+                    }
                 }
             }
         }
@@ -37,19 +53,22 @@
 {% endblock %}
 
 {% block content %}
+    <h1>Playground OCaml</h1>
     <form method="post" onsubmit="syncPre()">
-        <h1>Playground OCaml</h1>
+        <div class="run-button">
+            <input type="submit" formaction="/compile_ocaml" value="Compile">
+            {% if result["stderr"] %}
+                <input type="submit" formaction="/run_ocaml" value="Execute" disabled>
+            {% else %}
+                <input type="submit" formaction="/run_ocaml" value="Execute">
+            {% endif %}
+        </div>
+
         <code-input language="OCaml"><textarea data-code-input-fallback id="code">{{file_content}}</textarea></code-input>
         <input type="hidden" name="code" id="hiddenInput">
-
-        <input type="submit" formaction="/compile_ocaml" value="Compile">
-        {% if result["stderr"] %}
-        <input type="submit" formaction="/run_ocaml" value="Execute" disabled>
-        {% else %}
-        <input type="submit" formaction="/run_ocaml" value="Execute">
-        {% endif %}
     </form>
-    <button class="tab-header" onClick="switchTab(event, 'stdout')">
+    
+    <button class="tab-header" id="btn-stdout" onClick="switchTab(event, 'stdout')">
         Sortie standard
     </button>
     <button class="tab-header" onClick="switchTab(event, 'stderr')">
